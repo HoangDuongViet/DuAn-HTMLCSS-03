@@ -27,8 +27,29 @@ a{
     text-decoration: none;
 }
 
+.btn{
+    --height: 60px;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: var(--height);
+    text-align: center;
+    color: #FFFFFF;
+    background: #2E80CE;
+    min-width: 205px;
+    height: var(--height);
+    border-radius: 99px;
+    border: 1px solid #2E80CE;
+}
+
+.btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 /* header */
 .header {
+    padding-top: 30px;
     min-height: 100vh;
     background: var(--header-bg);
 }
@@ -79,5 +100,121 @@ a{
 .logo__brand--small {
     font-size: 300;
     font-size: 1.2em;
+}
+
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* navbar */
+.navbar__list{
+    display: flex;
+}
+
+.header-action__login,
+.navbar__link{
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding : 4px 21px;
+    color: #C9D2DA;
+}
+.navbar__link:hover,
+.navbar__link--active{
+    text-shadow: 1px 0 0  currentColor;
+    color: #fff;
+}
+
+.navbar__link--active::before{
+    position: relative;
+    display: inline-block;
+    left: -8px;
+    top: -2px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.header-action__signup{
+    --height:44px;
+    min-width: 104px;
+}
+
+.header-action{
+    display: flex;
+    align-items: center;
+}
+
+/* hero */
+.hero{
+    margin-top: 76px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__content{
+    flex-shrink: 0;   /*khong bi co*/
+    width: 44%;
+}
+
+.hero__media{
+    flex-grow: 1;
+}
+
+.hero__heading{
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.hero__desc{
+    margin-top: 22px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.67;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(201, 210, 218, 1);
+}
+
+.hero__row{
+    display: flex;
+    margin-top: 38px;
+    align-items: center;
+}
+
+.hero__phone{
+    margin-left: 38px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+    color: #fff
+}
+
+.hero__images{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero__img{
+    margin-right: -6px;
+    z-index: 1;
+    width: 330px;
+    height: 540px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.hero__img:last-child{
+    width: 210px;
+    height: 410px;
+    z-index: 0;
 }
 
